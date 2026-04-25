@@ -84,6 +84,21 @@ p + geom_point(alpha = 0.3) +
   scale_x_log10(labels = scales::dollar)
 ```
 
+```{r 3.13 plot}
+
+p <- ggplot(data = gapminder,
+            mapping = aes(x = gdpPercap,
+                          y = lifeExp))
+
+p + geom_point(alpha = 0.3) + 
+  geom_smooth(method = "lm") +
+  scale_x_log10(labels = scales::dollar) +
+  labs(x = "GDP per Capita",
+       y = "Life Expectancy in Years",
+       title = "Economic Growth and Life Expectancy",
+       caption = "Source: Gapminder")
+```
+
 
 ### Figure 3.16
  
