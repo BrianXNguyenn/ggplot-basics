@@ -32,6 +32,16 @@ p <- ggplot(data = gapminder,
 p + geom_point() + geom_smooth(method = "lm")
 ```
 
+```{r 3.8 plot}
+
+p <- ggplot(data = gapminder,
+            mapping = aes(x = gdpPercap,
+                          y = lifeExp))
+p + geom_point() + 
+  geom_smooth(method = "lm") +
+  scale_x_log10()
+```
+
 ### Figure 3.16
  
 Here you will make your next figure.
