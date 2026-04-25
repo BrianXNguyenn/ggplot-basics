@@ -73,6 +73,17 @@ p + geom_point(color = "purple") +
   scale_x_log10(labels = scales::dollar)
 ```
 
+```{r 3.12 plot}
+
+p <- ggplot(data = gapminder,
+            mapping = aes(x = gdpPercap,
+                          y = lifeExp))
+
+p + geom_point(alpha = 0.3) + 
+  geom_smooth(color = "orange", SE = FALSE, size = 8, method = "lm") +
+  scale_x_log10(labels = scales::dollar)
+```
+
 
 ### Figure 3.16
  
