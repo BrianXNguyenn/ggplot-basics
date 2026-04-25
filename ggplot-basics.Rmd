@@ -148,6 +148,21 @@ p + geom_point(mapping = aes(color = continent,
        caption = "Source: Gapminder")
 ```
 
+```{r 3.17 plot}
+
+p <- ggplot(data = gapminder,
+            mapping = aes(x = gdpPercap,
+                          y = lifeExp))
+
+p + geom_point(mapping = aes(color = log(pop))) + 
+  geom_smooth(method = "loess") +
+  scale_x_log10(labels = scales::dollar) +
+  labs(x = "GDP per Capita",
+       y = "Life Expectancy in Years",
+       title = "Economic Growth and Life Expectancy",
+       caption = "Source: Gapminder")
+```
+
 
 
 
